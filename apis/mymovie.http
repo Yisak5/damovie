@@ -1,0 +1,19 @@
+POST http://localhost:8080/api/movies/my
+Content-Type: application/json
+
+{
+  "movieCode": 4,
+  "movieName": "테스트 영화2"
+}
+
+
+###
+
+GET http://localhost:8080/api/movies/my/2
+Content-Type: application/json
+
+
+###
+
+DELETE http://localhost:8080/api/movies/my/3
+Content-Type: application/json

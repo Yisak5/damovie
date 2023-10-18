@@ -32,6 +32,7 @@ class MovieController(private val movieService: MovieService) {
         val movie = movieService.readById(id)
         return ResponseEntity(movie ?: HttpStatus.NOT_FOUND, if (movie != null) HttpStatus.OK else HttpStatus.NOT_FOUND)
     }
+
     @PostMapping("/my")
     fun createMovie(@RequestBody insertMyMovie: MyMovieRequest.InsertRequest): ResponseEntity<MyMovie> {
         val myMovie = MyMovie(
