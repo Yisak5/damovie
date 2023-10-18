@@ -1,15 +1,20 @@
-package com.danawa.movie.model
+package com.danawa.movie.api.model.entity
 
+import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-class Member {
+data class MyMovie(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
+    val id: Long? = null,
 
-}
+    @Column(nullable = true)
+    val movieName: String?,
+
+    val movieCode: Long,
+)
